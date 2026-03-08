@@ -1,0 +1,45 @@
+{
+  "name": "nextjs-route-autocomplete",
+  "displayName": "Next.js Route Autocomplete",
+  "description": "Autocomplete Next.js routes in router.push, <Link href>, etc. for App Router and Pages Router.",
+  "version": "0.0.1",
+  "publisher": "your-publisher",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onCommand:nextjsRoutes.refreshRoutes"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nextjsRoutes.refreshRoutes",
+        "title": "Next.js: Refresh Routes"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p ."
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.70.0",
+    "fast-glob": "^3.2.12",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^4.9.0"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.12"
+  }
+}
