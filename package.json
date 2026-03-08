@@ -2,7 +2,7 @@
   "name": "nextjs-route-autocomplete",
   "displayName": "Next.js Route Autocomplete",
   "description": "Autocomplete Next.js routes in router.push, <Link href>, etc. for App Router and Pages Router.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "your-publisher",
   "engines": {
     "vscode": ">=1.70.0"

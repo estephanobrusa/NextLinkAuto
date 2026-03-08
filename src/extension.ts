@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
   const provider = vscode.languages.registerCompletionItemProvider(
     selector,
     provideRouteCompletions(),
-    '"', "'", '/'
+    '"', "'", '`'
   );
   context.subscriptions.push(provider);
   console.log('[nextjs-route-autocomplete] Completion provider registered');

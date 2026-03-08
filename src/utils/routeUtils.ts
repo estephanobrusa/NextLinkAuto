@@ -28,11 +28,14 @@ export function fileToRoute(file: string): string | null {
 
   // Exclude special folders (starting with '(' or '_') and excluded names
   const segments = rel.split('/').filter(Boolean);
+  const kept: string[] = [];
   for (const seg of segments) {
-    if (seg.startsWith('(') && seg.endsWith(')')) return null; // Ignore group folders
+    if (seg.startsWith('(') && seg.endsWith(')')) continue; // Skip route group — doesn't affect URL
     if (seg.startsWith('_')) return null;
     if (isExcluded(seg)) return null;
+    kept.push(seg);
   }
+  rel = kept.join('/');
 
   if (rel === '') return '/';
   // Evita doble slash si rel ya empieza con /
